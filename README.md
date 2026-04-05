@@ -1,24 +1,16 @@
 # [SQL-Big Query] Website Performance Analysis in eCommerce 
-## 1. Project overview
+## 1. Business requirements
 
 The project was conducted to assist **Sales and Marketing Manager** to have an outlook on the business situation and marketing efficiency by analysing performance of the website, in terms of **Revenue, Bounce rate, The patterns of user behaviour, Products, Customer journey, etc**. 
-
 
 
 The dataset contains records about user sessions on a website collected from Google Analytics in 2017.
 
 
-## 3. Data preparation
-### 3.1. Import raw data
-To access data from the data warehouse of Google BigQuery, follow these steps: 
-- Create a new project in Google Cloud Platform
-- Navigate to the BigQuery console and select your newly created project.
-- Select "Add Data" in the navigation panel and then "Search a project".
-- Enter the project ID "bigquery-public-data.google_analytics_sample.ga_sessions" and click "Enter".
-- Click on the "ga_sessions_" table to open it.
-### 3.2. Data dictionary
-The dataset dictionary was present fully in this link:
-https://support.google.com/analytics/answer/3437719?hl=en
+## 2. Dataset understanding
+<details>
+<summary> Data dictionary </summary>
+
 | Field Name               | Data Type | Description                                                                                                                                                                                                                                                                                                                                                                                |
 |--------------------------|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | clientId                 | STRING    | Unhashed version of the Client ID for a given user associated with any given visit/session.                                                                                                                                                                                                                                                                                                |
@@ -36,68 +28,12 @@ https://support.google.com/analytics/answer/3437719?hl=en
 | totals.pageviews         | INTEGER   | Total number of pageviews within the session.                                                                                                                                                                                                                                                                                                                                              |
 | totals.screenviews       | INTEGER   | Total number of screenviews within the session.                                                                                                                                                                                                                                                                                                                                            |
 | totals.sessionQualityDim | INTEGER   | An estimate of how close a particular session was to transacting, ranging from 1 to 100, calculated for each session. A value closer to 1 indicates a low session quality, or far from transacting, while a value closer to 100 indicates a high session quality, or very close to transacting. A value of 0 indicates that Session Quality is not calculated for the selected time range. |
-### 3.3. Data statistics explore
-- The number of rows in July, 2017
-```
-SELECT COUNT(fullVisitorId) row_num,
-FROM `bigquery-public-data.google_analytics_sample.ga_sessions_201707*
-```
-| row_num |
-|---------|
-| 71812   |
-- The number of rows in 2017
-```
-SELECT COUNT(fullVisitorId) row_num,
-FROM `bigquery-public-data.google_analytics_sample.ga_sessions_2017*`
-```
-| row_num |
-|---------|
-| 467260  |
-- The number and percentage of visit by month
-```
-SELECT EXTRACT(MONTH FROM PARSE_DATE("%Y%m%d",date)) month
-,COUNT(*) AS counts
-,ROUND((COUNT(*)/(SELECT COUNT(*) 
-FROM `bigquery-public-data.google_analytics_sample.ga_sessions_2017*`))*100,1) pct
-FROM `bigquery-public-data.google_analytics_sample.ga_sessions_2017*`
-GROUP BY EXTRACT(MONTH FROM PARSE_DATE("%Y%m%d",date))
-```
-| month | counts | pct  |
-|-------|--------|------|
-| 6     | 63578  | 13.6 |
-| 3     | 69931  | 15.0 |
-| 8     | 2556   | 0.5  |
-| 2     | 62192  | 13.3 |
-| 4     | 67126  | 14.4 |
-| 1     | 64694  | 13.8 |
-| 7     | 71812  | 15.4 |
-| 5     | 65371  | 14.0 |
-- UNNEST hits and products
-```
-SELECT date, 
-fullVisitorId,
-eCommerceAction.action_type,
-product.v2ProductName,
-product.productRevenue,
-FROM `bigquery-public-data.google_analytics_sample.ga_sessions_201707*`,
-UNNEST(hits) AS hits,
-UNNEST(hits.product) as product
-```
-| date     | fullVisitorId       | action_type | v2ProductName                         | productRevenue |
-|----------|---------------------|-------------|---------------------------------------|----------------|
-| 20170712 | 4080810487624198636 | 1           | YouTube Custom Decals                 |                |
-| 20170712 | 4080810487624198636 | 2           | YouTube Custom Decals                 |                |
-| 20170712 | 7291695423333449793 | 1           | Keyboard DOT Sticker                  |                |
-| 20170712 | 7291695423333449793 | 2           | Keyboard DOT Sticker                  |                |
-| 20170712 | 3153380067864919818 | 2           | Google Baby Essentials Set            |                |
-| 20170712 | 3153380067864919818 | 1           | Google Baby Essentials Set            |                |
-| 20170712 | 5615263059272956391 | 0           | Android Lunch Kit                     |                |
-| 20170712 | 5615263059272956391 | 0           | Android Rise 14 oz Mug                |                |
-| 20170712 | 5615263059272956391 | 0           | Android Sticker Sheet Ultra Removable |                |
-| 20170712 | 5615263059272956391 | 0           | Windup Android                        |                |
-## 4. Data analysing
-### 4.1. Calculate total visit, pageview, transaction for Jan, Feb and March 2017 (order by month)
-```
+
+</details>
+
+## 3. Data analysing
+### Query 1: Calculate total visit, pageview, transaction for Jan, Feb and March 2017 (order by month)
+```sql
 SELECT 
     FORMAT_DATE("%Y%m",PARSE_DATE("%Y%m%d",date)) month_extract
     ,SUM(totals.visits) visits
