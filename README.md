@@ -1,17 +1,13 @@
 # [SQL-Big Query] Website Performance Analysis in eCommerce 
 ## 1. Project overview
 
-The project was conducted to assist Sales and Marketing Manager to have an outlook on the business situation and marketing efficiency by analysing performance of the website, in terms of Revenue, Bounce rate, The patterns of user behaviour, and a variety of other indicators. 
+The project was conducted to assist **Sales and Marketing Manager** to have an outlook on the business situation and marketing efficiency by analysing performance of the website, in terms of **Revenue, Bounce rate, The patterns of user behaviour, Products, Customer journey, etc**. 
+
 
 
 The dataset contains records about user sessions on a website collected from Google Analytics in 2017.
 
-## 2. The detailed project objectives
-- Overview of website activity
-- Bounce rate analysis
-- Revenue analysis
-- Transactions analysis
-- Products analysis
+
 ## 3. Data preparation
 ### 3.1. Import raw data
 To access data from the data warehouse of Google BigQuery, follow these steps: 
