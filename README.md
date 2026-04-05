@@ -82,9 +82,15 @@ order by total_visits desc
 | dfa                         | 302          | 124                 | 41.06       |
 
 
-Bounce rate is defined as the percentage of visitors that leave a webpage without taking an action, such as clicking on a link, filling out a form, or making a purchase.
+This analysis focuses on how different traffic sources influence user engagement, measured primarily through Bounce Rate (the % of sessions with no further action).
 
-This table showed the overview of website traffic, in regarding to different source, and the metrics that helped to analyse the level of engagement in the users as well as their behaviour. Those factors that were examined: source, total_visits, total_no_of_bounces, bounce_rate.
+Key takeaways: 
+- **High-Volume Sources Show Moderate Engagement:**
+The primary drivers of traffic—Google, Direct, and YouTube—exhibit "average" engagement with bounce rates ranging between 40% and 65%. While these sources bring the most users, over half of them leave after viewing only one page. This suggests the landing pages are functional but may not be highly optimized for deep exploration.
+- **High-Intent "Niche" Sources Perform Best:**
+Platforms like Reddit and Mail.google.com achieved the lowest bounce rates (20–30%). Users arriving from these specific channels are significantly more engaged. This likely points to higher "content-to-user" relevancy or the success of targeted email marketing campaigns compared to broad search traffic.
+- **Social Media Friction (The Mobile Gap):**
+There is a notable discrepancy in Facebook's performance: Desktop users (Facebook.com) bounce at 53.4%, while mobile users (m.facebook.com) bounce much higher at 64.28%. The 11% gap indicates a potential mobile user experience (UX) issue. Content that works on desktop may be failing to engage users on mobile devices, or the mobile landing page load times are causing users to drop off.
 
 #### 4.2.1 Sources with high number of visits
 
