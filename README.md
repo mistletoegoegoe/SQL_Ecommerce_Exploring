@@ -30,7 +30,7 @@ Dataset: The Google Analytics (GA) Sample Dataset record of every user interacti
 
 </details>
 
-## 3. Data analysing
+## 3. Customer purchase behaviour Analysing
 ### Query 1: Calculate total visit, pageview, transaction for Jan, Feb and March 2017 (order by month)
 ```sql
 SELECT 
