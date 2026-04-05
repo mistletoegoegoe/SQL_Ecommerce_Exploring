@@ -186,7 +186,12 @@ GROUP BY month
 |--------|---------------------------------|
 | 201707 | 1.11                            |
 
-The table shows the average total transactions per user in July. This data suggests that, during July 2017, the typical user conducted about 1.11 transactions on average. This could be useful for understanding user behavior, tracking user engagement with your platform, or evaluating the effectiveness of marketing campaigns or promotions during that specific month.
+This single data point gives us a baseline for User Frequency, which is a key measure of how often a customer returns to your funnel within a 30-day window.
+
+Key takeaways: 
+
+- **Baseline Engagement:** An average of 1.11 transactions per user indicates that the vast majority of your customers are "one-and-done" buyers within this specific month.
+- **The "Power User" Gap:** Since the average is so close to 1.0, it suggests a lack of high-frequency repeat purchasers. To move this number to 1.5 or 2.0, you would likely need a dedicated retention strategy (like loyalty rewards or replenishment reminders).
 
 ### Query 6. Average amount of money spent per session. Only include purchaser data in July 2017
 ```sql
@@ -208,7 +213,10 @@ GROUP BY month;
 |--------|---------------------------------|
 | 201707 | 43.86                           |
 
-The average total transactions per user for July 2017 is 43.86. This suggests that, on average, each user conducted approximately 44 transactions during that month. This could be an important metric for businesses to measure user engagement and activity.
+
+Key takeaways:
+- **Extreme Frequency Outlier:** An average of 43.86 transactions per user is an extraordinary baseline. This indicates that the "average" customer is purchasing ~1.4 times every day.
+
 
 ### Query 7. Other products purchased by customers who purchased product "YouTube Men's Vintage Henley" in July 2017
 ```sql
@@ -291,6 +299,12 @@ from product_data
 Overall, the number of product views from January 2017 to March 2017 increased gradually. The add-to-cart rate and purchase rate also increased over the same period, indicating improved user engagement and conversion.
 
 However, the add-to-cart rate and purchase rate are notably higher in March 2017, suggesting potential improvements in the website's user experience or marketing efforts.
+
+## 4. Recommendations
+- **Fix the "Mobile Gap":** Your 11% higher bounce rate on mobile Facebook (64% vs 53%) suggests a major UX or speed issue. Optimize landing pages for mobile-first loading to stop losing these users.
+- **Facilitate the "Deep Dive":** Since purchasers view 6x more pages (25 vs 4) than non-purchasers, add side-by-side comparison tools and "recently viewed" carousels to help users research without friction.
+- **Retarget Social "Window Shoppers":** Facebook and YouTube drive high traffic but almost zero revenue. Shift social spend from broad awareness to retargeting ads that show specific product reviews to users who already visited.
+- **Boost Purchase Frequency:** Your current baseline is 1.11 transactions per user. Launch a loyalty or "refill" email program to nudge this closer to 1.5, capitalizing on your strong Direct traffic ($195k/mo).
 
 ## 5. Gains from the project
 - Conducted this project was a huge opportunity to learn about marketing industry, especially customers' behaviour on digital platforms. That could be gained by analysing metrics such as bounce rate, revenue, transactions per visit, etc. 
