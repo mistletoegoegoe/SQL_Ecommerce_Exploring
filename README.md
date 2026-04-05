@@ -4,8 +4,7 @@
 The project was conducted to assist **Sales and Marketing Manager** to have an outlook on the business situation and marketing efficiency by analysing performance of the website, in terms of **Revenue, Bounce rate, The patterns of user behaviour, Products, Customer journey, etc**. 
 
 
-The dataset contains records about user sessions on a website collected from Google Analytics in 2017.
-
+Dataset: The Google Analytics (GA) Sample Dataset record of every user interaction on the Google Merchandise Store from 2016 to 2017. This dataset provides the raw digital track of every visitor—including their traffic source, device type, and the exact sequence of pageviews and clicks leading to a purchase.
 
 ## 2. Dataset understanding
 <details>
