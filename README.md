@@ -1,10 +1,10 @@
-# [SQL] Website Performance Analysis in eCommerce 
+# [SQL-Big Query] Website Performance Analysis in eCommerce 
 ## 1. Project overview
-The eCommerce dataset is stored in a public Google BigQuery dataset. This dataset contains information about user sessions on a website collected from Google Analytics in 2017.
 
 The project was conducted to assist Sales and Marketing Manager to have an outlook on the business situation and marketing efficiency by analysing performance of the website, in terms of Revenue, Bounce rate, The patterns of user behaviour, and a variety of other indicators. 
 
-To extract necessary data from the dataset, Google BigQuery was used in executing SQL queries. 
+
+The dataset contains records about user sessions on a website collected from Google Analytics in 2017.
 
 ## 2. The detailed project objectives
 - Overview of website activity
