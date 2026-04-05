@@ -52,14 +52,12 @@ SELECT
 
 The table provides the overview of the website performance across three first months in 2017, in terms of visits, pageviews, transactions, and revenue. Some insights that might be obtained would be:
 
-- **Traffic and User engagement:** The number of visits and pageviews increases over time. In regard of visit, 3 months witnesses a rise from 64694 (January) to 69931 (March), indicating the growing website interest. Simultaneously, the same patterns can be seen in the number of pageviews suggests that users tended to explore multiple pages in their visits, potentially, being interested in website's contents.
+- **Revenue Growth:** Revenue surged by 41.4% ($106k to $150k) over three months, significantly outpacing the 8% growth in traffic.
   
-- **Conversion and Revenue:** The number of transactions and total revenue also increased over 3 months. Along with the rise in the number of visits and pageviews, those might demonstrate the growing in users engagement with the website, which resulted in their transactions, contributing to company's revenue. The efficiency in customers' conversion also could be seen in the rapidly jump in revenue from January (106248.15) to March (150224.7)
+- **Transaction Spike:** March saw a major performance jump, with transactions increasing by 35.5% month-over-month despite only a 12.4% rise in visits.
   
-- **Seasonal or Marketing Influence:** The improvement of both traffic and revenue potentially indicated the impact of seasonal factors such as New Year Events, Marketing campaigns, or other optimisations strategies.
+- **Conversion Efficiency:** The disparity between modest traffic growth and rapid revenue gains indicates a high-quality user base and improved conversion efficiency toward the end of the quarter.
   
-- **Future research:** The data that had been considered showed a very positive sign in the performance of website. However, it was only some aspects of a bigger picture. To have a better and more comprehensive perspective, it needed to incorporate more data such as users' journey or exit points. Furthermore, considering the current Marketing activities, Operation strategies, or any other changes that had been made during this perios would also assist in obtaining clearer insights. 
-
 ### 4.2. Bounce rate per traffic source (order by total_visit DESC)
 ```
 select 
