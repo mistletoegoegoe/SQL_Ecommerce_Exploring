@@ -215,7 +215,7 @@ GROUP BY month;
 
 
 Key takeaways:
-- **Extreme Frequency Outlier:** An average of 43.86 transactions per user is an extraordinary baseline. This indicates that the "average" customer is purchasing ~1.4 times every day.
+- **Could be Frequency Outlier:** An average of 43.86 transactions per user is an extraordinary baseline. This indicates that the "average" customer is purchasing ~1.4 times every day.
 
 
 ### Query 7. Other products purchased by customers who purchased product "YouTube Men's Vintage Henley" in July 2017
