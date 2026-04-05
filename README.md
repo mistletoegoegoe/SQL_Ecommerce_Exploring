@@ -1,4 +1,4 @@
-# Project 1: SQL E-commerce Data Exploring
+# [SQL] Website Performance Analysis in eCommerce 
 ## 1. Project overview
 The eCommerce dataset is stored in a public Google BigQuery dataset. This dataset contains information about user sessions on a website collected from Google Analytics in 2017.
 
