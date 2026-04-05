@@ -168,15 +168,10 @@ order by month
 
 The table demonstrated behaviour of users who were purchaser and non-purchaser in 2 consecutive months (June and July, 2017). 
 
-#### Pageviews of purchaser and non-purchaser
-There was a significant difference in the number of pageviews that purchasers and non-purchasers had made. On average, users who made transactions tended to view around 25 pages, equals 6 times of this figure of non-purchasers (about 4 pages). 
-#### User engagement
-The higher average pageviews of purchasers suggested that the more engaged to website content, the more likely users made transactions. 
-#### User bahaviour
-The users who had intent to buy in advance, tended to spend more time in researching product information, browsing product reviews, details, or compared with other options before making payment. That led to the higher number of pageviews. 
-#### Recommendations
-The website should be optimised to showcase the relevant information such as product details, reviews, other similar products, etc, in order to save time for users and enhance their experience. 
-
+Key takeaways: 
+- **The Engagement Gap:** There is a massive disparity in behavior between segments; purchasers average 25 pageviews per session, nearly 6x higher than non-purchasers (4 pageviews).
+- **High-Intent Research:** The high pageview count for buyers suggests a "research-heavy" journey. These users aren't just browsing; they are actively comparing specs, reading reviews, and vetting details before committing to a transaction.
+- **Optimization Strategy:** To capitalize on this, the UI should prioritize deep-content accessibility—such as visible reviews and side-by-side comparisons—to streamline the "deep dive" phase for high-intent users.
 
 ### Query 5. Average number of transactions per user that made a purchase in July 2017
 ```sql
