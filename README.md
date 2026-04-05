@@ -306,9 +306,5 @@ However, the add-to-cart rate and purchase rate are notably higher in March 2017
 - **Retarget Social "Window Shoppers":** Facebook and YouTube drive high traffic but almost zero revenue. Shift social spend from broad awareness to retargeting ads that show specific product reviews to users who already visited.
 - **Boost Purchase Frequency:** Your current baseline is 1.11 transactions per user. Launch a loyalty or "refill" email program to nudge this closer to 1.5, capitalizing on your strong Direct traffic ($195k/mo).
 
-## 5. Gains from the project
-- Conducted this project was a huge opportunity to learn about marketing industry, especially customers' behaviour on digital platforms. That could be gained by analysing metrics such as bounce rate, revenue, transactions per visit, etc. 
-- Gained insights about marketing channels, how those channels drove traffic and pull customers, and the contribution of sources in total revenue.
-- Put foward some recommendations to improved website content and enhance user experience. 
 
 
